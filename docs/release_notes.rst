@@ -149,6 +149,35 @@ Bug Fixes
   any seed. This was only affecting the value 0. This has been fixed.
 
 
+IBM Q Provider 0.11.1
+=====================
+
+.. _Release Notes_0.11.1_New Features:
+
+New Features
+------------
+
+- :class:`qiskit.providers.ibmq.experiment.Experiment` now has three
+  additional attributes, `hub`, `group`, and `project`, that identify
+  the provider used to create the experiment.
+
+- Methods
+  :meth:`qiskit.providers.ibmq.experiment.ExperimentService.experiments` and
+  :meth:`qiskit.providers.ibmq.experiment.ExperimentService.analysis_results`
+  now support a ``limit`` parameter that allows you to limit the number of
+  experiments and analysis results returned.
+
+.. _Release Notes_0.11.1_Bug Fixes:
+
+Bug Fixes
+---------
+- Fixes the issue wherein a job could be left in the ``CREATING`` state if
+  job submit fails half-way through.
+
+- Fixes the infinite loop raised when passing an ``IBMQRandomService`` instance
+  to a child process.
+
+
 *************
 Qiskit 0.23.0
 *************
